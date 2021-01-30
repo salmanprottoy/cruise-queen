@@ -40,24 +40,24 @@
         </div>
 
 
-        <div class="booking-form">
+        <div id="ticket-booking" class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                <input id="flying-from" class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <input id="flying-to" class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                        <input class="inp-style" type="date" name="">
+                        <input id="departure-date" class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input id="return-date" class="inp-style" type="date" name="">
                 </div>
             </div>
             <div class="input-group f-class">
@@ -117,8 +117,43 @@
                     </div>
                 </div>
             </div>
-            <button id="confirmation-button" class="btn-style">Book Now</button>
+            <button id="confirmation-button" onclick="bookingConfirmation()" class="btn-style">Book Now</button>
         </div>
+        <!-- Confirmation message -->
+        <div id="ticket-confirmation" class="booking-confirmation booking-form" style="display:none">
+            <h3 class="text-success">Ticket Booking Confirmed!</h3>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">From</th>
+                        <td>:</td>
+                        <td id="confirmed-flying-from"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">To</th>
+                        <td>:</td>
+                        <td id="confirmed-flying-to"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Departure</th>
+                        <td>:</td>
+                        <td id="confirmed-departure"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Return</th>
+                        <td>:</td>
+                        <td id="confirmed-return"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total Cost</th>
+                        <td>:</td>
+                        <td id="confirmed-total-cost"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn-style">Pay Now</button>
+        </div>
+
     </main>
 
     <!--Thank You-->

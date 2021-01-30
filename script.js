@@ -31,3 +31,26 @@ function calculateTotalAmount() {
     const totalPrice = subtotalPrice + taxAmount;
     document.getElementById('total-price').innerText = totalPrice;
 }
+function bookingConfirmation(){
+    let flyingFrom = document.getElementById('flying-from').value;
+    let flyingTo = document.getElementById('flying-to').value;
+    let departureDate = document.getElementById('departure-date').value;
+    let returnDate = document.getElementById('return-date').value;
+    let totalCost = document.getElementById('total-price').innerText;
+    if(flyingFrom == null || flyingFrom == "" 
+        && flyingTo == null || flyingTo == "" 
+        && departureDate == null || departureDate == "" 
+        && returnDate == null || returnDate == "" 
+        || totalCost <= 0){
+            alert("Please fill up all fields");
+    }
+    else{
+        document.getElementById("ticket-booking").style.display = "none";
+        document.getElementById("ticket-confirmation").style.display = "block";
+        document.getElementById('confirmed-flying-from').innerText = flyingFrom;
+        document.getElementById('confirmed-flying-to').innerText = flyingTo;
+        document.getElementById('confirmed-departure').innerText = departureDate;
+        document.getElementById('confirmed-return').innerText = returnDate;
+        document.getElementById('confirmed-total-cost').innerText ='$' + totalCost;
+    }
+}
