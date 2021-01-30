@@ -32,11 +32,11 @@ function calculateTotalAmount() {
     document.getElementById('total-price').innerText = totalPrice;
 }
 function bookingConfirmation(){
-    let flyingFrom = document.getElementById('flying-from').value;
-    let flyingTo = document.getElementById('flying-to').value;
-    let departureDate = document.getElementById('departure-date').value;
-    let returnDate = document.getElementById('return-date').value;
-    let totalCost = document.getElementById('total-price').innerText;
+    let flyingFrom      = document.getElementById('flying-from').value;
+    let flyingTo        = document.getElementById('flying-to').value;
+    let departureDate   = document.getElementById('departure-date').value;
+    let returnDate      = document.getElementById('return-date').value;
+    let totalCost       = document.getElementById('total-price').innerText;
     if(flyingFrom == null || flyingFrom == "" 
         && flyingTo == null || flyingTo == "" 
         && departureDate == null || departureDate == "" 
