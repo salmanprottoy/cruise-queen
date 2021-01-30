@@ -45,12 +45,12 @@ function bookingConfirmation(){
             alert("Please fill up all fields");
     }
     else{
-        document.getElementById("ticket-booking").style.display = "none";
-        document.getElementById("ticket-confirmation").style.display = "block";
-        document.getElementById('confirmed-flying-from').innerText = flyingFrom;
-        document.getElementById('confirmed-flying-to').innerText = flyingTo;
-        document.getElementById('confirmed-departure').innerText = departureDate;
-        document.getElementById('confirmed-return').innerText = returnDate;
-        document.getElementById('confirmed-total-cost').innerText ='$' + totalCost;
+        document.getElementById("ticket-booking").style.display         = "none";
+        document.getElementById("ticket-confirmation").style.display    = "block";
+        document.getElementById('confirmed-flying-from').innerText      = flyingFrom;
+        document.getElementById('confirmed-flying-to').innerText        = flyingTo;
+        document.getElementById('confirmed-departure').innerText        = departureDate;
+        document.getElementById('confirmed-return').innerText           = returnDate;
+        document.getElementById('confirmed-total-cost').innerText       = '$' + totalCost;
     }
 }
